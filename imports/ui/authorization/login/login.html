@@ -1,13 +1,12 @@
 <template name="login">
   <section class="content-header">
     <h1>
-      Pace page
-      <small>Loading example</small>
+      Вход
+      <small>Авторизация</small>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="#">Examples</a></li>
-      <li class="active">Pace page</li>
+      <li><a href="/"><i class="fa fa-dashboard"></i> Главная</a></li>
+      <li class="active">Войти</li>
     </ol>
   </section>
 
@@ -15,48 +14,32 @@
   <section class="content">
     <div class="login-box">
       <div class="login-logo">
-        <a href="../../index2.html"><b>Admin</b>LTE</a>
+        <a href="/"><b>Shopogol</b>.KZ</a>
       </div>
       <!-- /.login-logo -->
       <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">Войти на портал</p>
 
-        <form action="../../index2.html" method="post">
+        <form id="loginForm">
           <div class="form-group has-feedback">
-            <input type="email" class="form-control" placeholder="Email">
+            <input id="loginEmailField" type="text" class="form-control" placeholder="Логин">
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" class="form-control" placeholder="Password">
+            <input id="loginPasswordField" type="password" class="form-control" placeholder="Пароль">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="row">
-            <div class="col-xs-8">
-              <div class="checkbox icheck">
-                <label>
-                  <input type="checkbox" id="rememberMeCbx"> Remember Me
-                </label>
-              </div>
-            </div>
             <!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+              <button type="submit" class="btn btn-primary btn-block btn-flat" id="loginLoginBtn">Войти</button>
             </div>
             <!-- /.col -->
           </div>
         </form>
 
-        <div class="social-auth-links text-center">
-          <p>- OR -</p>
-          <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
-            Facebook</a>
-          <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
-            Google+</a>
-        </div>
-        <!-- /.social-auth-links -->
-
-        <a href="#">I forgot my password</a><br>
-        <a href="register.html" class="text-center">Register a new membership</a>
+        <a href="/restorePassword">Забыли пароль?</a><br>
+        <a href="/register" class="text-center">Регистрация нового пользователя</a>
 
       </div>
       <!-- /.login-box-body -->
