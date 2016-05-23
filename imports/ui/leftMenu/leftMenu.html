@@ -1,0 +1,11 @@
+<template name="leftMenu">
+  <ul class="sidebar-menu">
+    <!-- <li class="header">MAIN NAVIGATION</li> -->
+    <li class="{{isActivePath '/login'}}">
+      <a href="/login"><i class="fa fa-lock text-green"></i><span>Войти</span></a>
+    </li>
+    <li class="{{isActivePath '/register'}}">
+      <a href="/register"><i class="fa fa-pencil text-red"></i><span>Регистрация</span></a>
+    </li>
+  </ul>
+</template>
