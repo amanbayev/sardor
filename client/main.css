@@ -1,4 +1,7 @@
 /* CSS declarations go here */
-html, body, .wrapper, #__blaze-root, .skin-blue {
+/*html, body, .wrapper, #__blaze-root, .skin-blue {
+  height: 100%;
+}*/
+.wrapper {
   height: 100%;
 }
