@@ -6,6 +6,8 @@ import { Companies } from '../../../api/Companies.js';
 Template.register.onRendered(function(){
   Meteor.subscribe("Companies");
   console.log('Subscribed to Companies');
+  Meteor.subscribe("allUsers");
+  console.log('Subscribed to allUsers');
 });
 
 Template.register.events({

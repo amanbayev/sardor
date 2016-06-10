@@ -36,12 +36,15 @@ if (Meteor.isServer) {
     "addCompany": function (CompaniesJSON) {
       var userObject = {
         username: CompaniesJSON.email,
-        mail: CompaniesJSON.email,
-        password: CompaniesJSON.password
+        email: CompaniesJSON.email,
+        password: CompaniesJSON.password,
+        profile: {
+          firstName: 'Новый',
+          lastName: 'Клиент',
+          company: CompaniesJSON.companyName
+        }
       };
-      Accounts.createUser(userObject, function(){
-        console.log('user created '+userObject.username);
-      });
+      Accounts.createUser(userObject);
       CompaniesJSON.createdAt = new Date();
       CompaniesJSON.createdBy = Meteor.userId();
       var cCompanies = Companies.insert(CompaniesJSON);

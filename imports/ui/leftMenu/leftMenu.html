@@ -1,11 +1,26 @@
 <template name="leftMenu">
   <ul class="sidebar-menu">
     <!-- <li class="header">MAIN NAVIGATION</li> -->
-    <li class="{{isActivePath '/login'}}">
-      <a href="/login"><i class="fa fa-lock text-green"></i><span>Войти</span></a>
-    </li>
-    <li class="{{isActivePath '/register'}}">
-      <a href="/register"><i class="fa fa-pencil text-red"></i><span>Регистрация</span></a>
-    </li>
+    {{#if currentUser}}
+      <li class="{{isActivePath '/client/profile'}}">
+        <a href="/client/profile"><i class="fa fa-user text-green"></i><span>Личный кабинет</span></a>
+      </li>
+      <li class="{{isActivePath '/client/catalog'}}">
+        <a href="/client/catalog"><i class="fa fa-shopping-bag text-green"></i><span>Каталог товаров</span></a>
+      </li>
+      <li class="{{isActivePath '/client/advertisement'}}">
+        <a href="/client/advertisement"><i class="fa fa-desktop text-green"></i><span>Заказ рекламы</span></a>
+      </li>
+      <li class="{{isActivePath '/client/notifications'}}">
+        <a href="/client/notifications"><i class="fa fa-bell-o text-green"></i><span>Заказ уведомлений</span></a>
+      </li>
+    {{else}}
+      <li class="{{isActivePath '/login'}}">
+        <a href="/login"><i class="fa fa-lock text-green"></i><span>Войти</span></a>
+      </li>
+      <li class="{{isActivePath '/register'}}">
+        <a href="/register"><i class="fa fa-pencil text-red"></i><span>Регистрация</span></a>
+      </li>
+    {{/if}}
   </ul>
 </template>
